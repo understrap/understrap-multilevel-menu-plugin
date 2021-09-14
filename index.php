@@ -22,3 +22,18 @@ function understrap_load_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'understrap_load_scripts');
+
+
+/**
+ * Updates the depth for our primary nav menu.
+ *
+ * @param array $args Array of wp_nav_menu() arguments.
+ * @return array
+ */
+function understrap_update_nav_menu_args( $args ) {
+	if ( 'primary' === $args['theme_location'] ) {
+		$args['depth'] = 3;
+	}
+	return $args;
+}
+add_filter( 'wp_nav_menu_args', 'understrap_update_nav_menu_args' );
