@@ -33,7 +33,6 @@
 						$el.next().css({"top": $parent.outerHeight(), "left": 0});
 					}
 				}
-				e.preventDefault();
 				e.stopPropagation();
 			}
 		});
