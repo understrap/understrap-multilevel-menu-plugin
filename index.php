@@ -37,3 +37,16 @@ function understrap_update_nav_menu_args( $args ) {
 	return $args;
 }
 add_filter( 'wp_nav_menu_args', 'understrap_update_nav_menu_args' );
+
+/**
+ * Understrap Nav Menu Args Override
+ * Updates the nav menu depth to allow WP to render 3 level html markup.
+ * @param array $args
+ * @return array
+ */
+function understrap_wp_nav_menu_args_override( $args ) {
+	$args['depth'] = 3;
+	return $args;
+}
+
+add_filter('wp_nav_menu_args', 'understrap_wp_nav_menu_args_override');
