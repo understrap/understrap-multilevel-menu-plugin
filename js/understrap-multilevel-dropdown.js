@@ -16,6 +16,10 @@
 					if ( $el.next().is(':off-right') ) {
 						$el.next().css({"top": '-11px', "left": -$el.next().outerWidth()});
 					}
+
+					if ( $el.next().is(':off-left') ) {
+						$el.next().css({"top": $parent.outerHeight(), "left": 0});
+					}
 				} else {
 					$parent.parent().find('.show').removeClass('show');
 					$parent.addClass('show');
@@ -27,7 +31,6 @@
 
 					if ( $el.next().is(':off-left') ) {
 						$el.next().css({"top": $parent.outerHeight(), "left": 0});
-						console.log($parent.outerHeight());
 					}
 				}
 				e.preventDefault();
