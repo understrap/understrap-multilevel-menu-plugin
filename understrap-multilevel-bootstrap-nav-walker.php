@@ -172,7 +172,7 @@ if (! class_exists('Understrap_WP_Bootstrap_Navwalker')) {
             $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
             $id = $id ? ' id="' . esc_attr($id) . '"' : '';
 
-            $output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+            $output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . ' role="menuitem" tabindex="0">';
 
             // initialize array for holding the $atts for the link item.
             $atts = array();
